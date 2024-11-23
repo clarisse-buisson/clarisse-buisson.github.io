@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarisse Buisson - Psychologue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4e1d2; /* Terra cotta tone */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #e07b39; /* Darker terra cotta */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .map {
+            margin-top: 20px;
+            width: 100%;
+            height: 400px;
+        }
+        
+        .footer {
+            background-color: #e07b39;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Clarisse Buisson</h1>
+        <h2>Psychologue</h2>
+    </div>
+
+    <div class="content">
+        <p>Bienvenue sur la page de Clarisse Buisson, psychologue à Paris. Je reçois dans mon cabinet situé au 167 boulevard Pereire, 75017 Paris. J'accueille des adultes, adolescents et enfants confrontés à des défis émotionnels, relationnels ou des situations particulières de la vie.</p>
+        
+        <p>Chaque individu est unique, c'est pourquoi j'offre un accompagnement personnalisé pour répondre aux besoins spécifiques de chacun. Mon approche sur-mesure vise à créer un cadre bienveillant où nous pourrons élaborer ensemble une voie adaptée à vos défis et à votre histoire.</p>
+        
+        <p>Formée à l'intégration du cycle de la vie (LI-ICV), je propose une méthode efficace pour traiter les traumatismes et expériences marquantes. J'utilise également la guidance parentale (méthode Barkley) pour fournir des outils aux parents dans la gestion des comportements de leurs enfants. Je réalise aussi des bilans cognitifs (WISC 5, TEACH) pour les enfants rencontrant des difficultés d'apprentissage.</p>
+        
+        <p>N'hésitez pas à me contacter pour toute question ou pour organiser un premier rendez-vous. Je serais heureuse de vous rencontrer et d'échanger avec vous.</p>
+        
+        <div id="map" class="map"></div>
+    </div>
+
+    <div class="footer">
+        <p>Contactez-moi pour plus d'informations</p>
+    </div>
+
+    <script>
+        function initMap() {
+            var location = { lat: 48.8857, lng: 2.2966 }; // Coordinates for 167 boulevard Pereire, Paris
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+</body>
+</html>
